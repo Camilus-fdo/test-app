@@ -16,6 +16,14 @@ Route::get('/', function () {
 });
 
 Route::get('user', ['uses' => 'UserController@index']);
+Route::get('login',  function() {
+	return view('Login');
+});
+
+Route::post('loginAuth', [
+	'uses' => 'UserController@loginUser',
+	'as' => 'signin'
+]);
 
 Route::post('register', [
 	'uses'	=> 'UserController@userRegistration',
