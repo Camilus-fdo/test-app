@@ -29,3 +29,5 @@ Route::post('register', [
 	'uses'	=> 'UserController@userRegistration',
 	'as'	=> 'signup'
 	]);
+
+Route::resource('contacts', 'ContactController');

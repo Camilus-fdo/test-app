@@ -9,11 +9,16 @@ use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
     public function userRegistration(Request $request) {
-    	$table = new User();
+        $table = new User();
+    	// $table = User::create([
+     //        'name' => $request->get('name'),
+     //        'email'=> $request->get('email'),
+     //        'password'=>$request->get('password')
+     //    ]);
 
 
-    	$table->name 		= $request->input('name');
-    	$table->email 		= $request->input('email');
+    	$table->name 		= $request->get('name');
+    	$table->email 		= $request->get('email');
     	$table->password 	= bcrypt($request->input('password'));
 
     	$table->save();
