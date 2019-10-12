@@ -24,7 +24,7 @@ class ContactController extends Controller
      */
     public function create()
     {
-        return "Inside create method";
+        return view('create');
     }
 
     /**
@@ -41,7 +41,17 @@ class ContactController extends Controller
             'email'         => 'required'  
         ]);
         
-        // $contact = Contact::
+         $contact = new Contact([
+            'first_name' => $request->get('first_name'),
+            'last_name' => $request->get('last_name'),
+            'email' => $request->get('email'),
+            'job_title' => $request->get('job_title'),
+            'city' => $request->get('city'),
+            'country' => $request->get('country')
+         ]);
+
+         $contact->save();
+         return "Sucess";
     }
 
     /**
