@@ -1,8 +1,8 @@
 {
-  "name": "testapp",
+  "name": "test-app",
   "description": "A Vue.js project",
   "version": "1.0.0",
-  "author": "Camilus",
+  "author": "Camilus <ncamiya@gmail.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
