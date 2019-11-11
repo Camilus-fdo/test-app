@@ -13,6 +13,12 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+# Route::middleware('auth:api')->get('/user', function (Request $request) {
+#     return $request->user();
+# });
+
+# Route:post('/addItems', ['uses' => 'ItemsController@postItems']);
+
+Route::post('addItems', [
+	'uses'	=> 'ItemsController@postItems'
+	]);
